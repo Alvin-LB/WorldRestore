@@ -1,0 +1,32 @@
+# Configuration file for WorldRestore.
+
+# All time values in this file are entered in the following manner:
+# 0ms0s0m0h0d0w (0 being replaceable with any whole number)
+# ms - milliseconds, s - seconds, m - minutes, h - hours, d - days, w - weeks
+# Of course, not all values need to be present, you could only use 1 of them.
+# Example: 5s6h4w would equal 5 seconds, 6 hours and 4 weeks.
+
+# Note: Due to the way CraftBukkit is coded, it's not possible to change world, world_nether or world_the_end while the server is running,
+# so the plugin will not be able to reset and backup these worlds.
+
+# How often the plugin should check if it's time to backup a world
+check-interval: 1d
+
+# List of all worlds that should be backed up and reset, and when they should be.
+# Each world should be listed with "<worldname>: <how often>" in the following manner (note the indentation of each line):
+# worlds-to-backup:
+#   world: 6h1d
+#   world_nether: 1w
+worlds-to-backup:
+
+# Where players should be teleported if they happen to be in a world while it's resetting (should preferably be in a world which can't be reset)
+player-kick-location:
+  x: 0
+  y: 255
+  z: 0
+  world: world
+
+# Message to display to players who get teleported out of a world. %worldname% will be replaced with the name of the world. This message
+# can be colour coded with the § character (ex. §c will be red)
+# Note: this value should always be in apostrophes.
+kick-message: '§6%worldname% is being reset. Please come back shortly!'

@@ -1,0 +1,17 @@
+name: 'WorldRestore'
+main: 'com.bringholm.worldrestore.WorldRestore'
+author: 'AlvinB'
+version: '1.0'
+commands:
+  worldrestore:
+    description: |
+      /worldrestore reload - reloads the config for WorldRestore
+      /worldrestore reset [world] - reloads a world manually
+    usage: /worldrestore <reload|reset> [world]
+    permission: worldrestore.admin
+    permission-message: §cYou don''t have permission to do this!
+permissions:
+  worldrestore.*:
+    description: Gives access to all permissions of this plugin.
+    children:
+      worldrestore.admin: true
